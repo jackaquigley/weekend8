@@ -22,7 +22,7 @@ export default {
 
 body {
   font-family: 'Source Serif Pro', serif;
-  
+
   background-color: #E1E5F2;
   background-position: center;
   width: 100%;

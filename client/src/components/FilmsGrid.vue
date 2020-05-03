@@ -5,15 +5,23 @@
 </template>
 
 <script>
+
 import FilmGridItem from './FilmGridItem'
 export default {
   data(){
     return {
       films: []
-    };
+    }
   },
-  mounted(){
-
+  methods: {
+    fetchData(){
+      fetch("http://localhost:3000/api/films")
+      .then(res => res.json())
+      .then(films => this.films = films);
+    }
+  },
+  mounted() {
+    this.fetchData();
   },
   components: {
     'film-grid-item': FilmGridItem

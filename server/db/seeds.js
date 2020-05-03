@@ -9,7 +9,7 @@ db.films.insertMany([
     release_date: "2000",
     runtime: "140 Mins",
     crew: {
-      director: "	Kinji Fukasaku",
+      director: "Kinji Fukasaku",
       producers:
       [
       "Masao Sato",
@@ -25,11 +25,12 @@ db.films.insertMany([
     rating: 18,
     runtime: "50 Mins",
     crew: {
-      director: "Bob",
+      director: "Ben Stiller",
       producers:
       [
-        "Bobert",
-        "Okay"
+        "Scott Rudin",
+        "Ben Stiller",
+        "John Hamburg"
       ]
     }
   }

@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="film-card">
   <h2>{{film.title}} </h2>
-  <p><span class="film-key">Genre: </span>{{film.Genre}}  </p>
+  <p><span class="film-key">Genre: </span>{{film.genre}}  </p>
   <p><span class="film-key">Rating: </span>{{film.rating}}  </p>
   <p><span class="film-key">Release Date: </span>{{film.release_date}}  </p>
   <p><span class="film-key">Running time: </span>{{film.runtime}}   </p>
@@ -22,9 +22,9 @@ export default {
     deleteFilm(){
 
     },
-    selectFilm() {
+    selectFilm(){
       FilmService.selectFilm(this.film._id)
-      .then(() => eventBus.$emit('film-selected', this.film))
+      .then(() => eventBus.$emit('selected-film', this.film))
     }
   }
 }

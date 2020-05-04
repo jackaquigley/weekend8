@@ -20,7 +20,8 @@ export default {
   props: ['film'],
   methods: {
     deleteFilm(){
-
+      FilmService.deleteFilm(this.film._id)
+      .then(() => eventBus.$emit('film-deleted', this.film._id))
     },
     selectFilm(){
       FilmService.selectFilm(this.film._id)
